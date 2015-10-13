@@ -9,5 +9,6 @@ void setup(){
 void loop(){
   if(digitalRead(7) == HIGH){
     Mouse.click();
+    delay(100);
   } 
 }
