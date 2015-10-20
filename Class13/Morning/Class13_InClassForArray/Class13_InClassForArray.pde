@@ -1,21 +1,25 @@
-// declare arrays to hold my x and y values
+
+// create an array of x and ys
 int[] arrayX;
 int[] arrayY;
 
 void setup() {
-  // initialize these lists to hold 10 items each
+  
+  // declare the arrays to have 10 values
   arrayX = new int[10];
   arrayY = new int[10];
-
-  // go through each one and give them a random value
+  
+  // loop through. Each one give it a random number between 0 and width or height
+  
   for (int i = 0; i < 10; i++) {
     arrayX[i] = int(random(0, width));
     arrayY[i] = int(random(0, height));
   }
+  
 }
-
 void draw() {
-  // draw an ellipse at each array x and array y location
+  
+  // draw them all!
   for (int i = 0; i < 10; i++) {
     ellipse(arrayX[i], arrayY[i], 20, 20);
   }
