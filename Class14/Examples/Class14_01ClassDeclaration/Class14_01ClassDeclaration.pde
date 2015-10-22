@@ -1,27 +1,39 @@
 // Class Declaration Example
-// Make a Dog d
-Dog d;
 
-void setup(){
-  // make a temporary color
-  color dogsColor = color(255,20,20);
-  d = new Dog("German Shepherd",dogsColor);
+// Make a Dog called spot
+// the Dog class is treated
+// like a variable type
+Dog spot;
+
+void setup() {
+  // create spot and initialize him
+  spot = new Dog("Terrier", color(255));
 }
 
-void draw(){
-}
+void draw() {
+  background(0);
 
-void mousePressed(){
-  d.bark();
+  if (mousePressed) {
+    // activate the method
+    spot.bark();
+
+    // call on a field
+    background(spot.coat);
+  }
 }
 
 class Dog {
+  // Set up your fields
   String breed;
   color coat;
+
+  // construct the class
   Dog (String b, color c) {  
     breed = b; 
-    coat = c; 
+    coat = c;
   } 
+
+  // create a method
   void bark() {
     println("Woof!");
   }
