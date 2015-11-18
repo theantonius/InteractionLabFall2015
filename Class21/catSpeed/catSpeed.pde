@@ -13,7 +13,7 @@ Movie mov;
 void setup() {
   size(640, 360);
   background(0);
-  mov = new Movie(this, "transit.mov");
+  mov = new Movie(this, "FunnyCatedit.mov");
   mov.loop();
 }
 
